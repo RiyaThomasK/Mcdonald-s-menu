@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>McDonald's Menu</title>
+</head>
+<body>
+    <header>
+    <nav id="header">
+      <h2 >McDonald's</h2>
+        <img src="logo.png" width="40px" class="logo"/><br>
+    <hr>
+    </nav>
+    </header>
+    
+    <br>
+
+    <h2 style="text-align: center;">Menu</h2>
+    <br><br>
+
+    <section class="items">
+        
+        <figure>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('dropdown1')" class="dropbtn"><img src="burgers.jpg"></button>
+                <div id="dropdown1" class="dropdown-content">
+                    <table>
+                        <tr><td>Aloo Tikki Burger</td><td>90.0</td></tr>
+                        <tr><td>McChicken Burger</td><td>120.0</td></tr>
+                        <tr><td>McSpicy Chicken Burger</td><td>209.0</td></tr>
+                        </table>
+                </div>
+            </div>
+            <figcaption>Burgers</figcaption>
+        </figure>
+        
+        <figure>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('dropdown2')" class="dropbtn"><img src="sides.jfif"></button>
+                <div id="dropdown2" class="dropdown-content">
+                    <table>
+                        <tr><td>Fries Regular</td><td>70.0</td></tr>
+                        <tr><td>Fries Medium</td><td>80.0</td></tr>
+                        <tr><td>Fries Large</td><td>90.0</td></tr>
+                        <tr><td>4 Chicken Nuggets  </td><td>110.0</td></tr>
+                    </table>
+                </div>
+            </div>
+            <figcaption>Sides</figcaption>
+        </figure>
+        
+
+        <figure>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('dropdown3')" class="dropbtn"><img src="happy.jfif"></button>
+                <div id="dropdown3" class="dropdown-content">
+                    <table>
+                        <tr><td>4 Chicken Nuggets + McChicken Burger</td><td>300.0</td></tr>
+                        <tr><td>Regular Fries + McChicken Burger</td><td>250.0</td></tr>
+                        <tr><td>Regular Fries + Aloo Tikki Burger</td><td>200.0</td></tr>
+                    </table>
+                </div>
+            </div>
+            <figcaption>Happy Meals</figcaption>
+        </figure>
+
+        <figure>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('dropdown4')" class="dropbtn"><img src="Sauces.png"></button>
+                <div id="dropdown4" class="dropdown-content">
+                    <table>
+                        <tr><td>Mustard Dip</td><td>25.0</td></tr>
+                        <tr><td>Chipotle Mayo</td><td>30.0</td></tr>
+                        <tr><td>Barbeque Sauce</td><td>40.0</td></tr>
+                    </table>
+                </div>
+            </div>
+            <figcaption>Dips</figcaption>
+        </figure>
+        
+        <figure>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('dropdown5')" class="dropbtn"><img src="drinks.jpg"></button>
+                <div id="dropdown5" class="dropdown-content">
+                    <table>
+                        <tr><td>Coke</td><td>70.0</td></tr>
+                        <tr><td>Fanta</td><td>70.0</td></tr>
+                        <tr><td>Sprite</td><td>70.0</td></tr>
+                    </table>
+                </div>
+            </div>
+            <figcaption>Beverages</figcaption>
+        </figure>
+
+        <figure>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('dropdown6')" class="dropbtn"><img src="desserts.png"></button>
+                <div id="dropdown6" class="dropdown-content">
+                    <table>
+                        <tr><td>Oreo McFlurry</td><td>70.0</td></tr>
+                        <tr><td>Softy</td><td>40.0</td></tr>
+                        <tr><td>Chocochip Cookie</td><td>90.0</td></tr>
+                    </table>
+                </div>
+            </div>
+            <figcaption>Desserts</figcaption>
+        </figure>
+
+    </section>
+
+    <br>
+    <br>
+
+    <section class="contact" id="contact">
+        <p style="text-align: center;">Contact us<br>
+            +91 48648843519</p>
+            <br>
+            <p style="text-align: center;">Opening hours<br>
+                8:00 AM to 1:00 AM</p>
+            <br><br>
+            <img src="logo.png" width="40px" class="center"/>
+            <br><br><br>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+        </div>
+    </section>
+    
+    
+    <script>
+
+function toggleDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId);
+    dropdown.classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+    // Check if the target is a dropdown button or contains a dropdown button
+    if (!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+};
+
+
+    </script>
+ 
+
+</body>
+</html>
