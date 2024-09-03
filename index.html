@@ -10,16 +10,14 @@
 </head>
 <body>
     <header>
-    <nav id="header">
-      <h2 >McDonald's</h2>
-        <img src="logo.png" width="40px" class="logo"/><br>
-    <hr>
-    </nav>
+      <h2 class="mcd">McDonald's</h2>
+        <a href="#" class="logo"><img src="logo.png"></a>
     </header>
+    <hr>
     
     <br>
 
-    <h2 style="text-align: center;">Menu</h2>
+    <h2 style="text-align: center;">MENU</h2>
     <br><br>
 
     <section class="items">
@@ -138,7 +136,10 @@ function toggleDropdown(dropdownId) {
     var dropdown = document.getElementById(dropdownId);
     dropdown.classList.toggle("show");
 }
+
+// Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
+    // Check if the target is a dropdown button or contains a dropdown button
     if (!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         for (var i = 0; i < dropdowns.length; i++) {
